@@ -29,20 +29,36 @@ DerivedData
 #
 #Pods/
 
-.idea/.name
+#built application files
+*.apk
+*.ap_
 
-.idea/compiler.xml
+# files for the dex VM
+*.dex
 
-.idea/copyright/profiles_settings.xml
+# Java class files
+*.class
 
-.idea/encodings.xml
+# generated files
+bin/
+gen/
 
-.idea/misc.xml
+# Local configuration file (sdk path, etc)
+local.properties
 
-.idea/modules.xml
+# Windows thumbnail db
+Thumbs.db
 
-.idea/react-native-device-info.iml
+# Android Studio
+*.iml
+.idea
+#.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
+.gradle
+build/
+.navigation
+captures/
+output.json 
 
-.idea/vcs.xml
-
-.idea/workspace.xml
+#NDK
+obj/
+.externalNativeBuild

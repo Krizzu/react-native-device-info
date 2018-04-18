@@ -98,20 +98,7 @@ public class RNDeviceModule extends ReactContextBaseJavaModule {
   }
 
   private Boolean isTablet() {
-    int layout = getReactApplicationContext().getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK;
-    if (layout != Configuration.SCREENLAYOUT_SIZE_LARGE && layout != Configuration.SCREENLAYOUT_SIZE_XLARGE) {
-      return false;
-    }
-
-    final DisplayMetrics metrics = getReactApplicationContext().getResources().getDisplayMetrics();
-    if (metrics.densityDpi == DisplayMetrics.DENSITY_DEFAULT
-            || metrics.densityDpi == DisplayMetrics.DENSITY_HIGH
-            || metrics.densityDpi == DisplayMetrics.DENSITY_MEDIUM
-            || metrics.densityDpi == DisplayMetrics.DENSITY_TV
-            || metrics.densityDpi == DisplayMetrics.DENSITY_XHIGH) {
-      return true;
-    }
-    return false;
+    return getReactApplicationContext().getResources().getBoolean(R.bool.isTablet);
   }
 
   private float fontScale() {
